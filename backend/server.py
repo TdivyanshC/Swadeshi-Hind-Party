@@ -289,7 +289,7 @@ async def health_check():
     """Health check endpoint"""
     try:
         # Test database connection
-        await db.admin.command('ping')
+        await client.admin.command('ping')
         return {"status": "healthy", "database": "connected", "timestamp": datetime.utcnow()}
     except Exception as e:
         logger.error(f"Health check failed: {str(e)}")
