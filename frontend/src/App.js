@@ -645,28 +645,106 @@ function Manifesto() {
           </p>
         </div>
 
-        <div className="space-y-12">
-          {manifestoPoints.map((section, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className={`w-12 h-12 bg-gradient-to-r ${section.color} rounded-full flex items-center justify-center text-2xl mr-4`}>
-                  {section.icon}
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {section.category}
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {section.points.map((point, pointIndex) => (
-                  <div key={pointIndex} className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 dark:text-gray-300">{point}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+        {/* Section Tabs */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-100 dark:bg-gray-800 p-1 rounded-xl">
+            <button
+              onClick={() => setActiveSection('sankalp')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                activeSection === 'sankalp'
+                  ? 'bg-orange-500 text-white shadow-md'
+                  : 'hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+              }`}
+            >
+              🇮🇳 Sankalp for Strong Bharat
+            </button>
+            <button
+              onClick={() => setActiveSection('detailed')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                activeSection === 'detailed'
+                  ? 'bg-orange-500 text-white shadow-md'
+                  : 'hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+              }`}
+            >
+              📋 Detailed Policies
+            </button>
+          </div>
         </div>
+
+        {/* Sankalp Section */}
+        {activeSection === 'sankalp' && (
+          <div className="space-y-12">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                हमारा संकल्प - मजबूत भारत के लिए
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                Our resolute pledge for a strong, prosperous, and self-reliant India. These are the transformational changes we promise to implement.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sankalpPoints.map((point, index) => (
+                <div key={index} className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="relative h-48">
+                    <img
+                      src={point.image}
+                      alt={point.category}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div className="absolute top-4 left-4">
+                      <div className={`w-12 h-12 bg-gradient-to-r ${point.color} rounded-full flex items-center justify-center text-2xl shadow-lg`}>
+                        {point.icon}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      {point.category}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {point.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-orange-900 rounded-2xl p-8 text-center text-white">
+              <h3 className="text-2xl font-bold mb-4">🇮🇳 यही है हमारा संकल्प</h3>
+              <p className="text-lg text-orange-100 dark:text-gray-300 max-w-3xl mx-auto">
+                Every promise made is a promise to be kept. Together, we will build a stronger, more prosperous, and truly self-reliant India where every citizen can thrive with dignity and pride.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Detailed Policies Section */}
+        {activeSection === 'detailed' && (
+          <div className="space-y-12">
+            {manifestoPoints.map((section, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${section.color} rounded-full flex items-center justify-center text-2xl mr-4`}>
+                    {section.icon}
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {section.category}
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {section.points.map((point, pointIndex) => (
+                    <div key={pointIndex} className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-700 dark:text-gray-300">{point}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
