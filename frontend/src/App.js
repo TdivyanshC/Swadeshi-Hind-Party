@@ -511,6 +511,81 @@ function About() {
 
 // Manifesto Page
 function Manifesto() {
+  const [activeSection, setActiveSection] = useState('sankalp');
+
+  const sankalpPoints = [
+    {
+      category: "Youth Empowerment",
+      icon: "🎓",
+      color: "from-blue-500 to-blue-600",
+      image: "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHx5b3V0aHxlbnwwfHx8fDE3NTkxNTM5Mzd8MA&ixlib=rb-4.1.0&q=85",
+      description: "Government-funded competitive exam coaching for youth"
+    },
+    {
+      category: "Farmers' Justice",
+      icon: "🚜",
+      color: "from-green-500 to-green-600",
+      image: "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxmYXJtZXJzfGVufDB8fHx8MTc1OTE1MzkyNnww&ixlib=rb-4.1.0&q=85",
+      description: "Loan waiver and legal MSP guarantee for all farmers"
+    },
+    {
+      category: "Reservation Reform",
+      icon: "⚖️",
+      color: "from-gray-500 to-gray-600",
+      image: "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "End caste-based reservation - start poverty-based reservation"
+    },
+    {
+      category: "Population Control",
+      icon: "👨‍👩‍👧‍👦",
+      color: "from-indigo-500 to-indigo-600",
+      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Strict population control law for sustainable future"
+    },
+    {
+      category: "One Nation, One Law",
+      icon: "🏛️",
+      color: "from-amber-500 to-amber-600",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Uniform Civil Code for equal rights to all citizens"
+    },
+    {
+      category: "Health for All",
+      icon: "🏥",
+      color: "from-teal-500 to-teal-600",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Mandatory health insurance for every citizen"
+    },
+    {
+      category: "Education Reform",
+      icon: "📚",
+      color: "from-rose-500 to-rose-600",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Compulsory moral, health, technical, and military education"
+    },
+    {
+      category: "School Fee Regulation",
+      icon: "🎒",
+      color: "from-cyan-500 to-cyan-600",
+      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Strict control on private school fees - no exploitation"
+    },
+    {
+      category: "Pension Justice",
+      icon: "👴",
+      color: "from-emerald-500 to-emerald-600",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Restore pensions of government employees, end perks of MLAs/MPs if required"
+    },
+    {
+      category: "Public Welfare Support",
+      icon: "🤝",
+      color: "from-violet-500 to-violet-600",
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      description: "Full support to laws like population control and every initiative for public welfare"
+    }
+  ];
+
   const manifestoPoints = [
     {
       category: "Economic Development",
