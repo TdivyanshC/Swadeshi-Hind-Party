@@ -318,8 +318,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Backend API testing for all form endpoints"
-    - "Form submission testing between frontend and backend"
+    - "Frontend form integration testing"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
