@@ -96,7 +96,7 @@ function Layout({ children }) {
               </div>
               <div className="hidden sm:block">
                 <span className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-                  Swadeshi Hindu Party
+                  Swadeshi Hind Party
                 </span>
               </div>
             </Link>
@@ -181,7 +181,7 @@ function Layout({ children }) {
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-lg">स्व</span>
                 </div>
-                <span className="text-xl font-bold">Swadeshi Hindu Party</span>
+                <span className="text-xl font-bold">Swadeshi Hind Party</span>
               </div>
               <p className="text-orange-100 dark:text-gray-300 mb-4 leading-relaxed">
                 स्वदेशी सोच, स्वदेशी रास्ते - Building a self-reliant and culturally rooted India through the five pillars of progress.
@@ -215,7 +215,7 @@ function Layout({ children }) {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-orange-200 dark:text-gray-300">
-                <p>Email: info@swadeshihindu.party</p>
+                <p>Email: info@swadeshihind.party</p>
                 <p>Phone: +91 98765 43210</p>
                 <p>Address: New Delhi, India</p>
               </div>
@@ -224,7 +224,7 @@ function Layout({ children }) {
 
           <div className="border-t border-orange-500/30 dark:border-gray-700 mt-8 pt-8 text-center">
             <p className="text-orange-200 dark:text-gray-400">
-              © 2025 Swadeshi Hindu Party. All rights reserved. | स्वदेशी सोच, स्वदेशी रास्ते
+              © 2025 Swadeshi Hind Party. All rights reserved. | स्वदेशी सोच, स्वदेशी रास्ते
             </p>
           </div>
         </div>
@@ -443,7 +443,7 @@ function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About Swadeshi Hindu Party
+            About Swadeshi Hind Party
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             स्वदेशी सोच, स्वदेशी रास्ते - A movement rooted in our culture, committed to progress
@@ -455,7 +455,7 @@ function About() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p>
-                Founded with a vision to create a self-reliant and culturally rooted India, the Swadeshi Hindu Party represents the aspirations of millions who believe in the power of indigenous solutions and traditional values.
+                Founded with a vision to create a self-reliant and culturally rooted India, the Swadeshi Hind Party represents the aspirations of millions who believe in the power of indigenous solutions and traditional values.
               </p>
               <p>
                 Our movement emerged from the need to balance modern development with our cultural heritage, ensuring that progress doesn't come at the cost of our identity and values.
@@ -1217,8 +1217,8 @@ function Contact() {
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    info@swadeshihindu.party<br />
-                    contact@swadeshihindu.party
+                    info@swadeshihind.party<br />
+                    contact@swadeshihind.party
                   </p>
                 </div>
               </div>

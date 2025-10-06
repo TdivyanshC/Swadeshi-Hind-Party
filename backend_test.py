@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Backend API Testing for Swadeshi Hindu Party Website
+Backend API Testing for Swadeshi Hind Party Website
 Tests all form submission endpoints and health checks
 """
 
@@ -89,7 +89,7 @@ class BackendTester:
             "email": "rajesh.sharma@gmail.com",
             "phone": "9876543210",
             "amount": "5000",
-            "message": "Proud to support Swadeshi Hindu Party's vision for Atmanirbhar Bharat"
+            "message": "Proud to support Swadeshi Hind Party's vision for Atmanirbhar Bharat"
         }
         
         try:
@@ -184,7 +184,7 @@ class BackendTester:
             "name": "Sunita Rani Verma",
             "email": "sunita.verma@gmail.com",
             "subject": "Inquiry about local party activities in Mumbai",
-            "message": "Namaste, I am interested in learning more about Swadeshi Hindu Party's activities in Mumbai region. How can I get involved in local community programs?"
+            "message": "Namaste, I am interested in learning more about Swadeshi Hind Party's activities in Mumbai region. How can I get involved in local community programs?"
         }
         
         try:
@@ -263,7 +263,7 @@ class BackendTester:
     
     def run_all_tests(self):
         """Run all backend tests"""
-        print("🚀 Starting Swadeshi Hindu Party Backend API Tests")
+        print("🚀 Starting Swadeshi Hind Party Backend API Tests")
         print("=" * 60)
         
         # Test basic connectivity first
@@ -317,7 +317,7 @@ class BackendTester:
         }
 
 if __name__ == "__main__":
-    print("Testing Swadeshi Hindu Party Backend API")
+    print("Testing Swadeshi Hind Party Backend API")
     print(f"Backend URL: {BACKEND_URL}")
     print()
     

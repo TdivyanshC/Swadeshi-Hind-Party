@@ -20,7 +20,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI(title="Swadeshi Hindu Party API", version="1.0.0")
+app = FastAPI(title="Swadeshi Hind Party API", version="1.0.0")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
@@ -126,7 +126,7 @@ def generate_volunteer_id() -> str:
 # API Routes
 @api_router.get("/")
 async def root():
-    return {"message": "Swadeshi Hindu Party API", "status": "active"}
+    return {"message": "Swadeshi Hind Party API", "status": "active"}
 
 @api_router.post("/donations", response_model=Donation)
 async def create_donation(donation_data: DonationCreate):
