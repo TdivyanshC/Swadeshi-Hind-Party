@@ -300,7 +300,7 @@ function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
-            backgroundImage: 'url(blob:https://web.whatsapp.com/463328c4-baf8-4c6b-b7ff-e8f953c18324)'
+            backgroundImage: 'url(/assets/hero_img.jpeg)'
           }}
         ></div>
         
