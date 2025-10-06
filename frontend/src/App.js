@@ -300,7 +300,7 @@ function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1682786703198-65b867dc6a07?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NTkxNTM4OTh8MA&ixlib=rb-4.1.0&q=85)'
+            backgroundImage: 'url(https://images.unsplash.com/photo-1739199958805-e0ede87869e3?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
           }}
         ></div>
         
