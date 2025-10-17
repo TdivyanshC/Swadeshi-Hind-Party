@@ -838,6 +838,53 @@ function Home() {
         `}</style>
       </section>
 
+      {/* Party Unity Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/assets/party.jpeg"
+            alt="Swadeshi Hind Party - United and Strong"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+        </div>
+
+        <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+          <div className="animate-fadeInUp">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              एक साथ, एक मज़बूत भारत
+            </h2>
+            <p className="text-2xl md:text-3xl mb-8 text-orange-200 font-medium">
+              One United, One Strong India
+            </p>
+            <p className="text-xl md:text-2xl mb-12 text-gray-200 leading-relaxed max-w-4xl mx-auto">
+              Our roots run deep in the soil of this ancient land. United by culture, strengthened by diversity,
+              we stand as one force for India's renaissance. स्वदेशी विचार, स्वदेशी शक्ति - Indigenous thoughts, indigenous strength.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold mb-2">संस्कृति की जड़ें</h3>
+                <p className="text-orange-200">Cultural Roots</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold mb-2">राष्ट्रीय एकता</h3>
+                <p className="text-orange-200">National Unity</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold mb-2">स्वदेशी शक्ति</h3>
+                <p className="text-orange-200">Indigenous Strength</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-orange-500/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-red-500/20 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-10 w-24 h-24 bg-yellow-500/20 rounded-full blur-xl"></div>
+        <div className="absolute top-1/3 right-10 w-28 h-28 bg-green-500/20 rounded-full blur-xl"></div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-orange-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
