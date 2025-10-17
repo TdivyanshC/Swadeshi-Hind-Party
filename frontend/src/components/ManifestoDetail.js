@@ -8,7 +8,7 @@ const manifestoDetails = {
     title: "Youth Empowerment",
     icon: "🎓",
     color: "from-blue-500 to-blue-600",
-    image: "https://images.unsplash.com/photo-1506869640319/fe1a24fd76dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHx5b3V0aHxlbnwwfHx8fDE3NTkxNTM5Mzd8MA&ixlib=rb-4.1.0&q=85",
+    image: "/assets/youth.jpeg",
     shortDescription: "Government-funded competitive exam coaching for youth",
     fullDescription: `Our commitment to youth empowerment represents a fundamental investment in India's future. We recognize that the youth are the backbone of our nation's progress and innovation.
 
@@ -39,7 +39,7 @@ Within the first five years, we aim to increase India's competitive exam success
     title: "Farmers' Justice",
     icon: "🚜",
     color: "from-green-500 to-green-600",
-    image: "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxmYXJtZXJzfGVufDB8fHx8MTc1OTE1MzkyNnww&ixlib=rb-4.1.0&q=85",
+    image: "/assets/farmer.jpeg",
     shortDescription: "Loan waiver and legal MSP guarantee for all farmers",
     fullDescription: `Agriculture is the backbone of our economy and farmers are the real wealth creators of our nation. Our comprehensive farmers' justice program addresses the systemic issues that have plagued Indian agriculture for decades.
 
@@ -101,7 +101,7 @@ This reform will create a more equitable society where opportunities are based o
     title: "Population Control",
     icon: "👨‍👩‍👧‍👦",
     color: "from-indigo-500 to-indigo-600",
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/population.avif",
     shortDescription: "Strict population control law for sustainable future",
     fullDescription: `Sustainable development requires responsible population management. Our comprehensive population control program balances individual rights with national responsibility for future generations.
 
@@ -132,7 +132,7 @@ This program will stabilize India's population growth, ensure better resource di
     title: "One Nation, One Law",
     icon: "🏛️",
     color: "from-amber-500 to-amber-600",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/justice.avif",
     shortDescription: "Uniform Civil Code for equal rights to all citizens",
     fullDescription: `Unity in diversity is our strength, but legal diversity should not divide our society. Our One Nation, One Law initiative aims to establish a Uniform Civil Code that ensures equal rights and justice for all citizens regardless of religion, caste, or community.
 
@@ -163,7 +163,7 @@ This initiative will strengthen national unity, eliminate legal discrimination, 
     title: "Health for All",
     icon: "🏥",
     color: "from-teal-500 to-teal-600",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/health.avif",
     shortDescription: "Mandatory health insurance for every citizen",
     fullDescription: `Healthcare is a fundamental right, not a privilege. Our Health for All program ensures that every citizen has access to quality healthcare services through comprehensive health insurance and infrastructure development.
 
@@ -194,7 +194,7 @@ This program will reduce out-of-pocket healthcare expenses by 80%, increase life
     title: "Education Reform",
     icon: "📚",
     color: "from-rose-500 to-rose-600",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/education.avif",
     shortDescription: "Compulsory moral, health, technical, and military education",
     fullDescription: `Education must prepare our youth for the challenges of the 21st century while preserving our cultural values. Our comprehensive education reform focuses on holistic development combining academic excellence with practical skills and moral education.
 
@@ -225,7 +225,7 @@ This reform will create well-rounded individuals who are academically sound, mor
     title: "School Fee Regulation",
     icon: "🎒",
     color: "from-cyan-500 to-cyan-600",
-    image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/fees.avif",
     shortDescription: "Strict control on private school fees - no exploitation",
     fullDescription: `Quality education should be accessible to all, not just the privileged few. Our school fee regulation ensures that private schools cannot exploit parents while maintaining educational quality and teacher welfare.
 
@@ -256,7 +256,7 @@ This regulation will reduce the financial burden on parents, ensure quality educ
     title: "Pension Justice",
     icon: "👴",
     color: "from-emerald-500 to-emerald-600",
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/pension.avif",
     shortDescription: "Restore pensions of government employees, end perks of MLAs/MPs if required",
     fullDescription: `Government employees have served the nation faithfully and deserve dignity in retirement. Our pension justice program ensures fair pensions while rationalizing excessive perks for elected representatives.
 
@@ -287,7 +287,7 @@ This program will provide financial security to millions of retired government e
     title: "Public Welfare Support",
     icon: "🤝",
     color: "from-violet-500 to-violet-600",
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "/assets/public.avif",
     shortDescription: "Full support to laws like population control and every initiative for public welfare",
     fullDescription: `Public welfare is paramount in our governance philosophy. Our comprehensive support program ensures that all initiatives aimed at improving public welfare receive full governmental backing and resources.
 

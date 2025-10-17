@@ -415,6 +415,422 @@ function Home() {
         </div>
       </section>
 
+      {/* India's Core Challenges - Modern Horizontal Accordion */}
+      <section className="relative py-20 bg-gradient-to-br from-orange-50 to-green-50 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-white/30 to-green-400/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:opacity-50"></div>
+
+        <div className="relative w-full">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              India's Core Challenges
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              The pressing issues that demand our immediate attention and collective action
+            </p>
+          </div>
+
+          {/* Desktop Horizontal Accordion */}
+          <div className="hidden lg:flex h-96 relative overflow-hidden rounded-2xl shadow-2xl">
+            {[
+              {
+                title: "Poor Civic Sense",
+                description: "Lack of civic responsibility and awareness leading to environmental degradation, traffic chaos, and social disorder that affects our daily lives.",
+                image: "/assets/civic_sense.jpg",
+                slug: "poor-civic-sense"
+              },
+              {
+                title: "Broken Infrastructure",
+                description: "Decaying roads, unreliable power supply, inadequate water systems, and crumbling public facilities that hinder progress and quality of life.",
+                image: "/assets/broken_infrastructure.jpg",
+                slug: "broken-infrastructure"
+              },
+              {
+                title: "Waste & Pollution",
+                description: "Rampant pollution, improper waste management, and environmental degradation threatening public health and ecological balance.",
+                image: "/assets/waste_pollution.jpg",
+                slug: "waste-pollution"
+              },
+              {
+                title: "Unemployment",
+                description: "Rising joblessness, lack of economic opportunities, and inadequate skill development leaving millions without dignified livelihoods.",
+                image: "/assets/unemployment.jpg",
+                slug: "unemployment"
+              },
+              {
+                title: "Corrupt Authorities",
+                description: "Systemic corruption, bureaucratic inefficiency, and misuse of power eroding public trust and hindering genuine development.",
+                image: "/assets/corrupt_authorities.jpg",
+                slug: "corrupt-authorities"
+              },
+              {
+                title: "Undemocratic Practices",
+                description: "Erosion of democratic values, suppression of dissent, and concentration of power undermining the very foundation of our republic.",
+                image: "/assets/undemocratic_practices.jpg",
+                slug: "undemocratic-practices"
+              }
+            ].map((challenge, index) => {
+              const images = [
+                "/assets/civic_sense.jpg", // Poor Civic Sense
+                "/assets/floods.webp", // Broken Infrastructure
+                "/assets/authorities.jpg", // Waste & Pollution
+                "/assets/unemployment-concept.webp", // Unemployment
+                "/assets/bridge.webp", // Corrupt Authorities
+                "/assets/corrupt.webp" // Undemocratic Practices
+              ];
+
+              return (
+                <div
+                  key={index}
+                  className="accordion-panel flex-1 relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out group"
+                  style={{
+                    backgroundImage: `url(${images[index] || challenge.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                {/* Background Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90 dark:from-black/85 dark:via-black/90 dark:to-black/95 transition-all duration-700 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 dark:group-hover:from-black/70 dark:group-hover:via-black/75 dark:group-hover:to-black/85"></div>
+
+                {/* Background Image Zoom Effect */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  style={{backgroundImage: `url(${images[index] || challenge.image})`}}
+                ></div>
+
+                {/* Content Container */}
+                <div className="relative h-full flex flex-col justify-center items-center p-6 transition-all duration-700">
+                  {/* Vertical Title (Default State) */}
+                  <div className="flex items-center justify-center h-full">
+                    <h3 className="text-2xl font-bold text-white transform -rotate-90 transition-all duration-700 ease-in-out group-hover:rotate-0 group-hover:text-orange-300 whitespace-nowrap origin-center drop-shadow-2xl text-center">
+                      {challenge.title}
+                    </h3>
+                  </div>
+
+                  {/* Description (Hidden by default, shown on hover) */}
+                  <div className="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-700 delay-200 group-hover:opacity-100 group-hover:translate-y-0 text-center">
+                    <p className="text-white leading-relaxed text-sm drop-shadow-lg font-medium bg-black/30 rounded-lg p-3 backdrop-blur-sm">
+                      {challenge.description}
+                    </p>
+                    {/* Learn More Button */}
+                    <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-300">
+                      <Link
+                        to={`/challenges/${challenge.slug}`}
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      >
+                        Learn More
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dimming effect for non-hovered panels */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-700 group-hover:opacity-100 pointer-events-none"></div>
+              </div>
+              );
+            })}
+          </div>
+
+          {/* Mobile/Tablet Vertical Accordion */}
+          <div className="lg:hidden space-y-4">
+            {[
+              {
+                title: "Poor Civic Sense",
+                description: "Lack of civic responsibility and awareness leading to environmental degradation, traffic chaos, and social disorder that affects our daily lives.",
+                image: "/assets/civic_sense.jpg",
+                slug: "poor-civic-sense"
+              },
+              {
+                title: "Broken Infrastructure",
+                description: "Decaying roads, unreliable power supply, inadequate water systems, and crumbling public facilities that hinder progress and quality of life.",
+                image: "/assets/broken_infrastructure.jpg",
+                slug: "broken-infrastructure"
+              },
+              {
+                title: "Waste & Pollution",
+                description: "Rampant pollution, improper waste management, and environmental degradation threatening public health and ecological balance.",
+                image: "/assets/waste_pollution.jpg",
+                slug: "waste-pollution"
+              },
+              {
+                title: "Unemployment",
+                description: "Rising joblessness, lack of economic opportunities, and inadequate skill development leaving millions without dignified livelihoods.",
+                image: "/assets/unemployment.jpg",
+                slug: "unemployment"
+              },
+              {
+                title: "Corrupt Authorities",
+                description: "Systemic corruption, bureaucratic inefficiency, and misuse of power eroding public trust and hindering genuine development.",
+                image: "/assets/corrupt_authorities.jpg",
+                slug: "corrupt-authorities"
+              },
+              {
+                title: "Undemocratic Practices",
+                description: "Erosion of democratic values, suppression of dissent, and concentration of power undermining the very foundation of our republic.",
+                image: "/assets/undemocratic_practices.jpg",
+                slug: "undemocratic-practices"
+              }
+            ].map((challenge, index) => (
+              <div key={index} className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={challenge.image}
+                    alt={challenge.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-bold text-white mb-2">{challenge.title}</h3>
+                    <p className="text-gray-200 text-sm leading-relaxed">{challenge.description}</p>
+                    {/* Learn More Button for Mobile */}
+                    <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                      <Link
+                        to={`/challenges/${challenge.slug}`}
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      >
+                        Learn More
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Custom CSS for Modern Accordion Animation */}
+        <style jsx>{`
+          .accordion-panel:hover {
+            flex: 3;
+          }
+          .accordion-panel:not(:hover) {
+            flex: 1;
+          }
+          .accordion-panel {
+            transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          /* Dim non-hovered panels when any panel is hovered */
+          .accordion-panel:hover ~ .accordion-panel,
+          .accordion-panel:has(~ .accordion-panel:hover) {
+            filter: brightness(0.7);
+          }
+        `}</style>
+      </section>
+
+      {/* India's Core Challenges - Modern Horizontal Accordion */}
+      <section className="relative py-20 bg-gradient-to-br from-orange-50 to-green-50 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-white/30 to-green-400/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:opacity-50"></div>
+
+        <div className="relative w-full">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              India's Core Challenges
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              The pressing issues that demand our immediate attention and collective action
+            </p>
+          </div>
+
+          {/* Desktop Horizontal Accordion */}
+          <div className="hidden lg:flex h-96 relative overflow-hidden rounded-2xl shadow-2xl">
+            {[
+              {
+                title: "Poor Civic Sense",
+                description: "Lack of civic responsibility and awareness leading to environmental degradation, traffic chaos, and social disorder that affects our daily lives.",
+                image: "/assets/civic_sense.jpg",
+                slug: "poor-civic-sense"
+              },
+              {
+                title: "Broken Infrastructure",
+                description: "Decaying roads, unreliable power supply, inadequate water systems, and crumbling public facilities that hinder progress and quality of life.",
+                image: "/assets/broken_infrastructure.jpg",
+                slug: "broken-infrastructure"
+              },
+              {
+                title: "Waste & Pollution",
+                description: "Rampant pollution, improper waste management, and environmental degradation threatening public health and ecological balance.",
+                image: "/assets/waste_pollution.jpg",
+                slug: "waste-pollution"
+              },
+              {
+                title: "Unemployment",
+                description: "Rising joblessness, lack of economic opportunities, and inadequate skill development leaving millions without dignified livelihoods.",
+                image: "/assets/unemployment.jpg",
+                slug: "unemployment"
+              },
+              {
+                title: "Corrupt Authorities",
+                description: "Systemic corruption, bureaucratic inefficiency, and misuse of power eroding public trust and hindering genuine development.",
+                image: "/assets/corrupt_authorities.jpg",
+                slug: "corrupt-authorities"
+              },
+              {
+                title: "Undemocratic Practices",
+                description: "Erosion of democratic values, suppression of dissent, and concentration of power undermining the very foundation of our republic.",
+                image: "/assets/undemocratic_practices.jpg",
+                slug: "undemocratic-practices"
+              }
+            ].map((challenge, index) => {
+              const images = [
+                "/assets/civic_sense.jpg", // Poor Civic Sense
+                "/assets/floods.webp", // Broken Infrastructure
+                "/assets/authorities.jpg", // Waste & Pollution
+                "/assets/unemployment-concept.webp", // Unemployment
+                "/assets/bridge.webp", // Corrupt Authorities
+                "/assets/corrupt.webp" // Undemocratic Practices
+              ];
+
+              return (
+                <div
+                  key={index}
+                  className="accordion-panel flex-1 relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out group"
+                  style={{
+                    backgroundImage: `url(${images[index] || challenge.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                {/* Background Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90 dark:from-black/85 dark:via-black/90 dark:to-black/95 transition-all duration-700 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 dark:group-hover:from-black/70 dark:group-hover:via-black/75 dark:group-hover:to-black/85"></div>
+
+                {/* Background Image Zoom Effect */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  style={{backgroundImage: `url(${images[index] || challenge.image})`}}
+                ></div>
+
+                {/* Content Container */}
+                <div className="relative h-full flex flex-col justify-center items-center p-6 transition-all duration-700">
+                  {/* Vertical Title (Default State) */}
+                  <div className="flex items-center justify-center h-full">
+                    <h3 className="text-2xl font-bold text-white transform -rotate-90 transition-all duration-700 ease-in-out group-hover:rotate-0 group-hover:text-orange-300 whitespace-nowrap origin-center drop-shadow-2xl text-center">
+                      {challenge.title}
+                    </h3>
+                  </div>
+
+                  {/* Description (Hidden by default, shown on hover) */}
+                  <div className="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-700 delay-200 group-hover:opacity-100 group-hover:translate-y-0 text-center">
+                    <p className="text-white leading-relaxed text-sm drop-shadow-lg font-medium bg-black/30 rounded-lg p-3 backdrop-blur-sm">
+                      {challenge.description}
+                    </p>
+                    {/* Learn More Button */}
+                    <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-300">
+                      <Link
+                        to={`/challenges/${challenge.slug}`}
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      >
+                        Learn More
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dimming effect for non-hovered panels */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-700 group-hover:opacity-100 pointer-events-none"></div>
+              </div>
+              );
+            })}
+          </div>
+
+          {/* Mobile/Tablet Vertical Accordion */}
+          <div className="lg:hidden space-y-4">
+            {[
+              {
+                title: "Poor Civic Sense",
+                description: "Lack of civic responsibility and awareness leading to environmental degradation, traffic chaos, and social disorder that affects our daily lives.",
+                image: "/assets/civic_sense.jpg",
+                slug: "poor-civic-sense"
+              },
+              {
+                title: "Broken Infrastructure",
+                description: "Decaying roads, unreliable power supply, inadequate water systems, and crumbling public facilities that hinder progress and quality of life.",
+                image: "/assets/broken_infrastructure.jpg",
+                slug: "broken-infrastructure"
+              },
+              {
+                title: "Waste & Pollution",
+                description: "Rampant pollution, improper waste management, and environmental degradation threatening public health and ecological balance.",
+                image: "/assets/waste_pollution.jpg",
+                slug: "waste-pollution"
+              },
+              {
+                title: "Unemployment",
+                description: "Rising joblessness, lack of economic opportunities, and inadequate skill development leaving millions without dignified livelihoods.",
+                image: "/assets/unemployment.jpg",
+                slug: "unemployment"
+              },
+              {
+                title: "Corrupt Authorities",
+                description: "Systemic corruption, bureaucratic inefficiency, and misuse of power eroding public trust and hindering genuine development.",
+                image: "/assets/corrupt_authorities.jpg",
+                slug: "corrupt-authorities"
+              },
+              {
+                title: "Undemocratic Practices",
+                description: "Erosion of democratic values, suppression of dissent, and concentration of power undermining the very foundation of our republic.",
+                image: "/assets/undemocratic_practices.jpg",
+                slug: "undemocratic-practices"
+              }
+            ].map((challenge, index) => (
+              <div key={index} className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={challenge.image}
+                    alt={challenge.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-bold text-white mb-2">{challenge.title}</h3>
+                    <p className="text-gray-200 text-sm leading-relaxed">{challenge.description}</p>
+                    {/* Learn More Button for Mobile */}
+                    <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                      <Link
+                        to={`/challenges/${challenge.slug}`}
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      >
+                        Learn More
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Custom CSS for Modern Accordion Animation */}
+        <style jsx>{`
+          .accordion-panel:hover {
+            flex: 3;
+          }
+          .accordion-panel:not(:hover) {
+            flex: 1;
+          }
+          .accordion-panel {
+            transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          /* Dim non-hovered panels when any panel is hovered */
+          .accordion-panel:hover ~ .accordion-panel,
+          .accordion-panel:has(~ .accordion-panel:hover) {
+            filter: brightness(0.7);
+          }
+        `}</style>
+      </section>
+
       {/* Featured Sections Preview */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-green-50 dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -630,213 +1046,6 @@ function Home() {
         </div>
       </section>
 
-      {/* India's Core Challenges - Modern Horizontal Accordion */}
-      <section className="relative py-20 bg-gradient-to-br from-orange-50 to-green-50 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-white/30 to-green-400/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:opacity-50"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              India's Core Challenges
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              The pressing issues that demand our immediate attention and collective action
-            </p>
-          </div>
-
-          {/* Desktop Horizontal Accordion */}
-          <div className="hidden lg:flex h-96 relative overflow-hidden rounded-2xl shadow-2xl">
-            {[
-              {
-                title: "Poor Civic Sense",
-                description: "Lack of civic responsibility and awareness leading to environmental degradation, traffic chaos, and social disorder that affects our daily lives.",
-                image: "/assets/civic_sense.jpg",
-                slug: "poor-civic-sense"
-              },
-              {
-                title: "Broken Infrastructure",
-                description: "Decaying roads, unreliable power supply, inadequate water systems, and crumbling public facilities that hinder progress and quality of life.",
-                image: "/assets/broken_infrastructure.jpg",
-                slug: "broken-infrastructure"
-              },
-              {
-                title: "Waste & Pollution",
-                description: "Rampant pollution, improper waste management, and environmental degradation threatening public health and ecological balance.",
-                image: "/assets/waste_pollution.jpg",
-                slug: "waste-pollution"
-              },
-              {
-                title: "Unemployment",
-                description: "Rising joblessness, lack of economic opportunities, and inadequate skill development leaving millions without dignified livelihoods.",
-                image: "/assets/unemployment.jpg",
-                slug: "unemployment"
-              },
-              {
-                title: "Corrupt Authorities",
-                description: "Systemic corruption, bureaucratic inefficiency, and misuse of power eroding public trust and hindering genuine development.",
-                image: "/assets/corrupt_authorities.jpg",
-                slug: "corrupt-authorities"
-              },
-              {
-                title: "Undemocratic Practices",
-                description: "Erosion of democratic values, suppression of dissent, and concentration of power undermining the very foundation of our republic.",
-                image: "/assets/undemocratic_practices.jpg",
-                slug: "undemocratic-practices"
-              }
-            ].map((challenge, index) => {
-              const images = [
-                "/assets/civic_sense.jpg", // Poor Civic Sense
-                "/assets/floods.webp", // Broken Infrastructure
-                "/assets/authorities.jpg", // Waste & Pollution
-                "/assets/unemployment-concept.webp", // Unemployment
-                "/assets/bridge.webp", // Corrupt Authorities
-                "/assets/corrupt.webp" // Undemocratic Practices
-              ];
-
-              return (
-                <div
-                  key={index}
-                  className="accordion-panel flex-1 relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out group"
-                  style={{
-                    backgroundImage: `url(${images[index] || challenge.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  }}
-                >
-                {/* Background Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90 dark:from-black/85 dark:via-black/90 dark:to-black/95 transition-all duration-700 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 dark:group-hover:from-black/70 dark:group-hover:via-black/75 dark:group-hover:to-black/85"></div>
-
-                {/* Background Image Zoom Effect */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  style={{backgroundImage: `url(${images[index] || challenge.image})`}}
-                ></div>
-
-                {/* Content Container */}
-                <div className="relative h-full flex flex-col justify-center items-center p-6 transition-all duration-700">
-                  {/* Vertical Title (Default State) */}
-                  <div className="flex items-center justify-center h-full">
-                    <h3 className="text-2xl font-bold text-white transform -rotate-90 transition-all duration-700 ease-in-out group-hover:rotate-0 group-hover:text-orange-300 whitespace-nowrap origin-center drop-shadow-2xl text-center">
-                      {challenge.title}
-                    </h3>
-                  </div>
-
-                  {/* Description (Hidden by default, shown on hover) */}
-                  <div className="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-700 delay-200 group-hover:opacity-100 group-hover:translate-y-0 text-center">
-                    <p className="text-white leading-relaxed text-sm drop-shadow-lg font-medium bg-black/30 rounded-lg p-3 backdrop-blur-sm">
-                      {challenge.description}
-                    </p>
-                    {/* Learn More Button */}
-                    <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-300">
-                      <Link
-                        to={`/challenges/${challenge.slug}`}
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                      >
-                        Learn More
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Dimming effect for non-hovered panels */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-700 group-hover:opacity-100 pointer-events-none"></div>
-              </div>
-              );
-            })}
-          </div>
-
-          {/* Mobile/Tablet Vertical Accordion */}
-          <div className="lg:hidden space-y-4">
-            {[
-              {
-                title: "Poor Civic Sense",
-                description: "Lack of civic responsibility and awareness leading to environmental degradation, traffic chaos, and social disorder that affects our daily lives.",
-                image: "/assets/civic_sense.jpg",
-                slug: "poor-civic-sense"
-              },
-              {
-                title: "Broken Infrastructure",
-                description: "Decaying roads, unreliable power supply, inadequate water systems, and crumbling public facilities that hinder progress and quality of life.",
-                image: "/assets/broken_infrastructure.jpg",
-                slug: "broken-infrastructure"
-              },
-              {
-                title: "Waste & Pollution",
-                description: "Rampant pollution, improper waste management, and environmental degradation threatening public health and ecological balance.",
-                image: "/assets/waste_pollution.jpg",
-                slug: "waste-pollution"
-              },
-              {
-                title: "Unemployment",
-                description: "Rising joblessness, lack of economic opportunities, and inadequate skill development leaving millions without dignified livelihoods.",
-                image: "/assets/unemployment.jpg",
-                slug: "unemployment"
-              },
-              {
-                title: "Corrupt Authorities",
-                description: "Systemic corruption, bureaucratic inefficiency, and misuse of power eroding public trust and hindering genuine development.",
-                image: "/assets/corrupt_authorities.jpg",
-                slug: "corrupt-authorities"
-              },
-              {
-                title: "Undemocratic Practices",
-                description: "Erosion of democratic values, suppression of dissent, and concentration of power undermining the very foundation of our republic.",
-                image: "/assets/undemocratic_practices.jpg",
-                slug: "undemocratic-practices"
-              }
-            ].map((challenge, index) => (
-              <div key={index} className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={challenge.image}
-                    alt={challenge.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white mb-2">{challenge.title}</h3>
-                    <p className="text-gray-200 text-sm leading-relaxed">{challenge.description}</p>
-                    {/* Learn More Button for Mobile */}
-                    <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-200">
-                      <Link
-                        to={`/challenges/${challenge.slug}`}
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                      >
-                        Learn More
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Custom CSS for Modern Accordion Animation */}
-        <style jsx>{`
-          .accordion-panel:hover {
-            flex: 3;
-          }
-          .accordion-panel:not(:hover) {
-            flex: 1;
-          }
-          .accordion-panel {
-            transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-          }
-
-          /* Dim non-hovered panels when any panel is hovered */
-          .accordion-panel:hover ~ .accordion-panel,
-          .accordion-panel:has(~ .accordion-panel:hover) {
-            filter: brightness(0.7);
-          }
-        `}</style>
-      </section>
 
       {/* Party Unity Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
