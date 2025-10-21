@@ -260,6 +260,25 @@ button:hover::before, .btn:hover::before {
   }
 }
 
+/* Horizontal Accordion Styles */
+.accordion-panel:hover {
+  flex: 3 !important;
+}
+
+.accordion-panel:not(:hover) {
+  flex: 1 !important;
+}
+
+.accordion-panel {
+  transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Dim non-hovered panels when any panel is hovered */
+.accordion-panel:hover ~ .accordion-panel,
+.accordion-panel:has(~ .accordion-panel:hover) {
+  filter: brightness(0.7);
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .animate-fadeInUp,
@@ -268,7 +287,7 @@ button:hover::before, .btn:hover::before {
   .animate-bounce {
     animation: none;
   }
-  
+
   * {
     transition: none !important;
   }
