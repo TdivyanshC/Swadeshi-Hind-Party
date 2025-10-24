@@ -100,9 +100,11 @@ function Layout({ children }) {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-                <span className="text-white font-bold text-lg">स्व</span>
-              </div>
+              <img
+                src="/assets/logo-removebg-preview.png"
+                alt="Swadeshi Hind Party Logo"
+                className="w-10 h-10 group-hover:scale-105 transition-transform duration-200"
+              />
               <div className="hidden sm:block">
                 <span className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
                   Swadeshi Hind Party
@@ -919,8 +921,8 @@ function About() {
           </div>
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/3687322/pexels-photo-3687322.jpeg"
-              alt="Indian Flag Rally"
+              src="/assets/hero_img.jpeg"
+              alt="Swadeshi Hind Party"
               className="w-full h-96 object-cover rounded-2xl shadow-lg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
